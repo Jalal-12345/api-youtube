@@ -80,4 +80,15 @@ app.post("/SEARCH", async (req, res) => {
   }
 })
 
+app.get("/getSearch" , async(req,res)=>{
+  try{
+    const findSearch =  await SeacrhModel.find({});
+    return res.json(findSearch);
+  }
+  catch(error){
+    console.log(error);
+  }
+})
+
+
 
